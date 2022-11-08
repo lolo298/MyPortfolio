@@ -12,4 +12,24 @@ body {
 #logo {
   width: 500px;
   height: 500px;
+  display: none;
+}
+#e02QbSUnrjA1 {
+  width: 500px;
+  height: 500px;
+}
+
+.fix.navLogo {
+  animation: reduce 3s 3s;
+}
+
+@keyframes reduce {
+  0% {
+    width: 500px;
+    height: 500px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
 }
