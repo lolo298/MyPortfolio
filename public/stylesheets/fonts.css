@@ -1,0 +1,11 @@
+@font-face {
+    font-family: conthrax;
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/conthrax-sb.ttf") format("truetype"), local("conthrax");
+}
+
+@font-face {
+    font-family: Spring in may;
+    src: url("/fonts/Spring in May.ttf") format("truetype");
+}
