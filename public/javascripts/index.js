@@ -24,9 +24,6 @@ async function deleteText(ref) {
   }
 }
 
-const learning = ["UX design", "web development", "graphic design"];
-var textRunning = false;
-
 document.addEventListener("scroll", async () => {
   if (textRunning || !$("#learning").visible(true)) return;
   while ($("#learning").visible(true)) {
