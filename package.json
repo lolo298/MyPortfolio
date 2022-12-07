@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npx nodemon ./bin/www -e js,json,ejs,css,html"
+    "start": "node ./bin/www",
+    "dev": "npx nodemon ./bin/www -e js,json,ejs,css,html"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
