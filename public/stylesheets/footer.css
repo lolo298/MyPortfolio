@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    width: 100vw;
+    background-color: #141414;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer div img {
+    padding: 10px;
+}
+
+footer a {
+    color: #5E73E0;
+    font-size: 1.5em;
+}

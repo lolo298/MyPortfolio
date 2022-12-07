@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -24,7 +28,7 @@ async function deleteText(ref) {
   }
 }
 
-const learning = ["UX design", "web development", "graphic design"];
+const learning = ["UX design", "web development", "graphic design", "Back-end development"];
 var textRunning = false;
 
 document.addEventListener("scroll", async () => {
@@ -32,10 +36,10 @@ document.addEventListener("scroll", async () => {
   while ($("#learning").visible(true)) {
     textRunning = true;
     for (item of learning) {
-      console.log(item, typeof item);
       await type(item, "#learning");
       await wait(2000);
       await deleteText("#learning");
     }
+    textRunning = false;
   }
 });

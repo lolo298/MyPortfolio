@@ -1,24 +1,20 @@
 body {
   background-color: #141414;
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
   margin: 0;
   color: white;
   overflow: hidden;
+  overflow-x: hidden !important;
   font-family: "conthrax", sans-serif;
 }
 
-main {
+#main {
   background-image: url("/PortfolioBackground.svg");
   background-size: cover;
   background-repeat: repeat-y;
   overflow-x: hidden;
-}
-
-.wrapper {
-  background-color: #555;
-  width: 100%;
-  height: 100%;
 }
 
 #logo {
@@ -26,8 +22,8 @@ main {
   height: 500px;
   display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
 }
 
@@ -35,8 +31,8 @@ main {
   width: 500px;
   height: 500px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
 }
 
@@ -45,7 +41,7 @@ main {
 }
 
 .navbar {
-  animation: reduceNav 2s 3s forwards cubic-bezier(.55, 0, .2, 1.12);
+  animation: reduceNav 3s 2s forwards cubic-bezier(.55, 0, .2, 1.12);
 }
 
 .noAnimation #e02QbSUnrjA1,
@@ -54,6 +50,7 @@ main {
   animation-duration: 1ms;
   animation-fill-mode: forwards;
 }
+
 
 @keyframes reduce {
   0% {
@@ -69,24 +66,24 @@ main {
 
 @keyframes reduceNav {
   0% {
-    height: 100%;
+    height: 3800px;
   }
 
   100% {
-    height: 10%;
+    height: 80px;
   }
 }
 
 @keyframes moveToNav {
   0% {
-    top: 50%;
-    left: 50%;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
   }
 
   100% {
-    top: 0;
-    left: 0;
+    top: 0vh;
+    left: 0vw;
     transform: translate(0, 0);
   }
 }
@@ -181,4 +178,55 @@ main {
   100% {
     opacity: 0;
   }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.projects a {
+  color: #5E73E0;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.project {
+  width: 45%;
+
+  padding: 15px 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apidex {
+  background-color: #3D3D3D;
+}
+
+.apidex img {
+  width: 100%;
+  border-radius: 20px;
+  height: auto;
+}
+
+.pap {
+  background-color: #6390A0;
+  margin-top: 10%;
+}
+
+.pap img {
+  width: 30%;
+  height: auto;
+  border-radius: 20px;
 }
