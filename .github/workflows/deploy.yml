@@ -33,4 +33,3 @@ jobs:
           script: |
             cd /var/www/html/portfolio
             npm i
-            npm start
