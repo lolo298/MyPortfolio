@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/fonts.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
     <!-- prettier-ignore -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="/javascripts/jquery.visible.min.js"></script>
@@ -14,14 +16,14 @@
       var textRunning = false;
     </script>
     <% if(dev == "prod") { %>
-    <div class="wrapper">
+    <div class="anim">
       <!-- prettier-ignore -->
       <svg id="logo" class="fix" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd"><path d="M231.839 109.96L124.324 377.677l19.362 11.15 65.766-110.567v-43.847l36.733-21.115 5.722-114.843-20.068 11.505zM143.686 388.829l22.063 12.716 52.33-59.677 70.903-.74 49.92 59.88 17.299-9.952-66.71-105.61-37.584 22.575-37.939-21.887-70.282 102.695z"/><path d="M251.907 98.455l18.936 10.92 104.833 270.337-19.475 11.344-61.841-112.748v-43.73l-36.718-21.265-5.735-114.858z"/></g></svg>
       <!-- prettier-ignore -->
       <svg id="e02QbSUnrjA1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><style>#e02QbSUnrjA3_to {animation: e02QbSUnrjA3_to__to 2300ms linear 1 normal forwards}@keyframes e02QbSUnrjA3_to__to { 0% {transform: translate(205.539505px,338.117493px);animation-timing-function: cubic-bezier(0.42,0,0.58,1)} 21.73913% {transform: translate(184.403435px,316.980967px);animation-timing-function: cubic-bezier(0.445,0.03,0.35,1.4)} 78.26087% {transform: translate(205.537567px,338.115088px)} 100% {transform: translate(205.537567px,338.115088px)}} #e02QbSUnrjA4_to {animation: e02QbSUnrjA4_to__to 2300ms linear 1 normal forwards}@keyframes e02QbSUnrjA4_to__to { 0% {transform: translate(238.206497px,390.875992px);animation-timing-function: cubic-bezier(0.42,0,0.58,1)} 21.73913% {transform: translate(238.206497px,412.012719px);animation-timing-function: cubic-bezier(0.445,0.03,0.35,1.4)} 78.26087% {transform: translate(238.206497px,390.8786px)} 100% {transform: translate(238.206497px,390.8786px)}} #e02QbSUnrjA5_to {animation: e02QbSUnrjA5_to__to 2300ms linear 1 normal forwards}@keyframes e02QbSUnrjA5_to__to { 0% {transform: translate(271.941002px,338.706497px);animation-timing-function: cubic-bezier(0.42,0,0.58,1)} 21.73913% {transform: translate(293.076792px,317.569971px);animation-timing-function: cubic-bezier(0.445,0.03,0.35,1.4)} 78.26087% {transform: translate(271.94266px,338.704092px)} 100% {transform: translate(271.94266px,338.704092px)}}</style><g transform="matrix(1.892673 0 0 1.892674-200.903797-396.305573)" clip-rule="evenodd"><g id="e02QbSUnrjA3_to" transform="translate(205.539505,338.117493)"><path d="M228.641,267.487L171.835,408.936l10.23,5.891l34.748-58.418v-23.167l19.408-11.156l3.023-60.678-10.603,6.079Z" transform="translate(-205.539505,-338.117493)" clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"/></g><g id="e02QbSUnrjA4_to" transform="translate(238.206497,390.875992)"><path d="M182.065,414.828l11.657,6.719l27.649-31.531l37.462-.391l26.375,31.638l9.14-5.258-35.246-55.8-19.858,11.928-20.045-11.564-37.134,54.259Z" transform="translate(-238.206497,-390.875992)" clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"/></g><g id="e02QbSUnrjA5_to" transform="translate(271.941002,338.706497)"><path d="M239.244,261.408l10.005,5.77l55.389,142.833-10.29,5.994-32.674-59.571v-23.105l-19.4-11.235-3.03-60.686Z" transform="translate(-271.941002,-338.706497)" clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"/></g></g></svg>
     </div>
     <% } else if (dev == "dev") { %>
-    <div class="wrapper navbar noAnimation">
+    <div class="anim navbar noAnimation">
       <!-- prettier-ignore -->
       <svg id="logo" class="fix navLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd"><path d="M231.839 109.96L124.324 377.677l19.362 11.15 65.766-110.567v-43.847l36.733-21.115 5.722-114.843-20.068 11.505zM143.686 388.829l22.063 12.716 52.33-59.677 70.903-.74 49.92 59.88 17.299-9.952-66.71-105.61-37.584 22.575-37.939-21.887-70.282 102.695z"/><path d="M251.907 98.455l18.936 10.92 104.833 270.337-19.475 11.344-61.841-112.748v-43.73l-36.718-21.265-5.735-114.858z"/></g></svg>
     </div>
@@ -30,58 +32,47 @@
       $("body").css("overflow", "visible");
     </script>
     <% } %>
-    <main>
+    <div id="main">
       <div class="quote-container">
         <p id="quote">
-          “That was when I realized, as terrifying and painful as reality can
-          be, it’s also the only place where you can find true happiness.
-          Because reality is real.”
+          “That was when I realized, as terrifying and painful as reality can be, it’s also the only
+          place where you can find true happiness. Because reality is real.”
         </p>
         <p>James Halliday dans player one de Ernest Cline</p>
       </div>
       <div class="sep"></div>
       <div class="mockupContainer">
         <div id="mockupText">
-          I'm currently learning &nbsp;
-          <div class="typingContainer">
-            <span id="learning"></span>
-            <span class="input-cursor"></span>
-          </div>
+          <h2>
+            I'm currently learning &nbsp;
+            <div class="typingContainer">
+              <span id="learning"></span>
+              <span class="input-cursor"></span>
+            </div>
+          </h2>
         </div>
         <div id="mockup-wrapper">
-          <img
-            class="mockup"
-            id="computer"
-            src="/images/mockup.png"
-            alt="apidex"
-          />
-          <img
-            class="mockup"
-            id="phone"
-            src="/images/mockupPhone.png"
-            alt="Projet PAP"
-          />
+          <img class="mockup" id="computer" src="/images/mockup.png" alt="apidex" />
+          <img class="mockup" id="phone" src="/images/mockupPhone.png" alt="Projet PAP" />
         </div>
       </div>
-    </main>
+      <div class="sep"></div>
+      <div class="projects">
+        <h2>What i do</h2>
+        <div class="project-container">
+          <div class="project apidex">
+            <img src="/images/Apidex.png" alt="ApiDex" />
+          </div>
+          <div class="project pap">
+            <img src="/images/pap1.jpg" alt="Projet PAP" />
+            <img src="/images/pap2.jpg" alt="Projet PAP" />
+          </div>
+        </div>
+        <% if(dev == "dev") { %>
+        <a href="#"><h3>View my others projects -></h3></a>
+        <% } %>
+      </div>
+    </div>
+    <%- include('footer'); %>
   </body>
-  <script src="/javascripts/svg.js"></script>
-  <% if(dev == "prod") { %>
-  <script>
-    document.querySelector("#e02QbSUnrjA1").onanimationend = function () {
-      $("#logo").show();
-      $("#e02QbSUnrjA1").hide();
-      $("#logo").addClass("navLogo");
-      $(".wrapper").addClass("navbar");
-      document
-        .querySelector(".navbar")
-        .addEventListener("animationend", function (e) {
-          if (e.animationName == "reduceNav") {
-            $("body").css("overflow", "visible");
-          }
-        });
-    };
-  </script>
-  <% } %>
-  <script src="/javascripts/index.js"></script>
 </html>

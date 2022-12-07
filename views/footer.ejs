@@ -1,0 +1,80 @@
+<div class="sep"></div>
+<footer>
+  <a href="mailto:lorenzoaoulini@gmail.com">lorenzoaoulini@gmail.com</a>
+  <div>
+    <img
+      src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/github.svg"
+      width="50"
+      height="50"
+      alt="github"
+    />
+    <a href="https://github.com/lolo298/">Github</a>
+  </div>
+  <div>
+    <img
+      src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/linkedin.svg"
+      width="50"
+      height="50"
+      alt="Linkedin"
+    />
+    <a href="https://linkedin.com/in/lorenzo-aoulini-a6772522a/">Linkedin</a>
+  </div>
+</footer>
+<script src="/javascripts/svg.js"></script>
+<% if(dev == "prod" && title == "Lorenzo") { %>
+<script>
+  var animState = 0;
+  document.querySelector("#e02QbSUnrjA1").onanimationend = function () {
+    $("#logo").show();
+    $("#e02QbSUnrjA1").hide();
+    $("#logo").addClass("navLogo");
+    $(".anim").addClass("navbar");
+    document.querySelector(".navbar").addEventListener("animationend", function (e) {
+      if (e.animationName == "reduceNav") {
+        animState++;
+        $("body").css("overflow", "visible");
+      }
+      if (animState == 1) {
+        var projects, contact;
+        projects = document.createElement("p");
+        projects.innerHTML = "Projects";
+        projects.addEventListener("click", function () {
+          document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
+        });
+        contact = document.createElement("p");
+        contact.innerHTML = "Contact";
+        contact.addEventListener("click", function () {
+          document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+        });
+        var nav = document.createElement("div");
+        nav.id = "nav-content";
+        nav.appendChild(projects);
+        nav.appendChild(contact);
+        document.querySelector(".navbar").appendChild(nav);
+      }
+    });
+  };
+</script>
+<% } else { %>
+<script>
+  var projects, contact;
+  projects = document.createElement("p");
+  projects.innerHTML = "Projects";
+  projects.addClass("navItem");
+  projects.addEventListener("click", function () {
+    document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
+  });
+  contact = document.createElement("p");
+  contact.innerHTML = "Contact";
+  contact.addClass("navItem");
+  contact.addEventListener("click", function () {
+    document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+  });
+  var nav = document.createElement("div");
+  nav.id = "nav-content";
+  nav.appendChild(projects);
+  nav.appendChild(contact);
+  document.querySelector(".navbar").appendChild(nav);
+</script>
+<%} %>
+<script src="/javascripts/index.js"></script>

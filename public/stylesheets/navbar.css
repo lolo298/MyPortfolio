@@ -1,0 +1,28 @@
+.anim {
+    background-color: #555;
+    width: 100%;
+    height: 3800px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+
+#nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+}
+
+.navItem {
+    cursor: pointer;
+}
