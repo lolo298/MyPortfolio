@@ -25,6 +25,7 @@ body {
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
+  z-index: 500;
 }
 
 #e02QbSUnrjA1 {
@@ -34,6 +35,7 @@ body {
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
+  z-index: 500;
 }
 
 .fix.navLogo {
@@ -66,11 +68,11 @@ body {
 
 @keyframes reduceNav {
   0% {
-    height: 3800px;
+    height: 100vh;
   }
 
   100% {
-    height: 80px;
+    height: 10vh;
   }
 }
 
