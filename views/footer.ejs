@@ -21,7 +21,7 @@
   </div>
 </footer>
 <script src="/javascripts/svg.js"></script>
-<% if(dev == "prod" && title == "Lorenzo") { %>
+<% if(dev == "prod" && title == "Lorenzo Aoulini | Portfolio") { %>
 <script>
   var animState = 0;
   document.querySelector("#e02QbSUnrjA1").onanimationend = function () {
@@ -33,6 +33,10 @@
       if (e.animationName == "reduceNav") {
         animState++;
         $("body").css("overflow", "visible");
+      }
+      if (e.animationName == "reduceNav") {
+        $("h1").css("visibility", "visible");
+
       }
       if (animState == 1) {
         var projects, contact;
@@ -60,13 +64,13 @@
   var projects, contact;
   projects = document.createElement("p");
   projects.innerHTML = "Projects";
-  projects.addClass("navItem");
+  projects.classList.add("navItem");
   projects.addEventListener("click", function () {
     document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
   });
   contact = document.createElement("p");
   contact.innerHTML = "Contact";
-  contact.addClass("navItem");
+  contact.classList.add("navItem");
   contact.addEventListener("click", function () {
     document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
   });

@@ -43,3 +43,10 @@ document.addEventListener("scroll", async () => {
     textRunning = false;
   }
 });
+
+let logo = document.getElementById("logo");
+logo.onanimationend = (e) => {
+  if(e.animationName == "moveToNav"){
+  logo.style.visibility = "visible";
+  }
+};
