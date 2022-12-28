@@ -6,7 +6,7 @@ require("dotenv").config();
 /* GET home page. */
 router.get("/", function (req, res, next) {
   console.log(req.app.get("env"));
-  res.render("index", { title: "Lorenzo", dev: process.env.MODE });
+  res.render("index", { title: "Lorenzo Aoulini | Portfolio", dev: process.env.MODE });
 });
 
 module.exports = router;

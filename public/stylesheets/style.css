@@ -148,7 +148,10 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 500px;
-  font-size: 32px;
+}
+
+#mockupText h2 {
+  font-size: 30px;
 }
 
 .typingContainer {
