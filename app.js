@@ -1,6 +1,7 @@
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
@@ -15,7 +16,13 @@ app.set("view engine", "ejs");
 
 app.use('/robots.txt', function (req, res, next) {
   res.type('text/plain')
-  res.send("User-agent: *\nDisallow: /");
+  res.send("User-agent: *\nAllow: /\nSitemap: https://lorenzoa.dev/sitemap.xml");
+});
+app.get('/sitemap.xml', function (req, res, next) {
+  res.type('text/xml')
+  fs.readFile("sitemap.xml", function (err, data) {
+    res.send(data);
+  });
 });
 
 app.use(logger("dev"));

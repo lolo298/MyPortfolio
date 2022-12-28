@@ -6,7 +6,9 @@ require("dotenv").config();
 /* GET home page. */
 
 router.get("/", function (req, res, next) {
-  console.log(req.app.get("env"));
+  res.render("index", { title: "Lorenzo Aoulini | Portfolio", dev: process.env.MODE });
+});
+router.get("/index.html", function (req, res, next) {
   res.render("index", { title: "Lorenzo Aoulini | Portfolio", dev: process.env.MODE });
 });
 
