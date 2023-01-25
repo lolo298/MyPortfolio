@@ -351,3 +351,4 @@ MigrationBackup/
 .github/
 .env
 robots.txt
+projects/web

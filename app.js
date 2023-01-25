@@ -30,11 +30,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, "public")));
-
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
+app.use("/", express.static(path.join(__dirname, "public")));
+
+if(process.env.MODE !== "prod") {
+  fs.readdirSync("./projects/web").forEach(function (dir) {
+    app.use("/" + dir, require(path.join(__dirname + "/projects/web/"+dir+"/route.js")));
+    //app.use("/" + dir, express.static(path.join(__dirname, "/projects/web/"+dir)));
+    console.log("Loaded " + dir);
+  })
+}
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
