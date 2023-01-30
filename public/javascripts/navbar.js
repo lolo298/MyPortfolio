@@ -21,7 +21,7 @@ contact = document.createElement("p");
 contact.innerHTML = "Contact";
 contact.classList.add("navItem");
 contact.addEventListener("click", function () {
-  document.querySelector(".contact").scrollIntoView({ behavior: "smooth" });
+  document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
 });
 
 var curentPage = window.location.pathname.split("/")[1];
