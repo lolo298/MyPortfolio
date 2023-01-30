@@ -29,7 +29,8 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 300px;
+    width: 400px;
+        margin-right: 2%;
 }
 
 .navItem {

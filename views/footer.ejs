@@ -50,7 +50,7 @@
       if (animState == 1) {
         var projects, contact;
         projects = document.createElement("p");
-        projects.innerHTML = lang =="en" ? "Projects" : "Projets";
+        projects.innerHTML = lang == "en" ? "Projects" : "Projets";
         projects.addEventListener("click", function () {
           document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
         });
@@ -72,7 +72,7 @@
 <script>
   var projects, contact;
   projects = document.createElement("p");
-  projects.innerHTML = lang =="en" ? "Projects" : "Projets";
+  projects.innerHTML = lang == "en" ? "Projects" : "Projets";
   projects.classList.add("navItem");
   projects.style.cursor = "pointer";
   projects.addEventListener("click", function () {
@@ -92,6 +92,10 @@
 </script>
 <%} %> <% if(title == "Lorenzo Aoulini | Portfolio") { %>
 <script src="/javascripts/index.js"></script>
-<% } %> <% if(title == "Lorenzo Aoulini | Projects") { %>
+<% } else { %>
+<script src="/javascripts/navbar.js"></script>
+<% } if(title == "Lorenzo Aoulini | Projects") { %>
 <script src="/javascripts/projects.js"></script>
+<% } if(title == "Lorenzo Aoulini | Timeline") { %>
+<script src="/javascripts/timeline.js"></script>
 <% } %>
