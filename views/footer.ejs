@@ -48,36 +48,61 @@
         $("h1").css("visibility", "visible");
       }
       if (animState == 1) {
-        var projects, contact;
+        var projects, timeline, contact;
         projects = document.createElement("p");
         projects.innerHTML = lang == "en" ? "Projects" : "Projets";
+        projects.classList.add("navItem");
         projects.addEventListener("click", function () {
-          document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
+          window.location.href = "/projects";
         });
+
+        timeline = document.createElement("p");
+        timeline.innerHTML = "Experience";
+        timeline.classList.add("navItem");
+        timeline.addEventListener("click", function () {
+          window.location.href = "/timeline";
+        });
+
         contact = document.createElement("p");
         contact.innerHTML = "Contact";
+        contact.classList.add("navItem");
         contact.addEventListener("click", function () {
-          document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+          document.querySelector(".contact").scrollIntoView({ behavior: "smooth" });
         });
+
         var nav = document.createElement("div");
         nav.id = "nav-content";
         nav.appendChild(projects);
+        nav.appendChild(timeline);
         nav.appendChild(contact);
-        document.querySelector(".navbar").appendChild(nav);
+        document.querySelector(".navFix").appendChild(nav);
       }
     });
   };
 </script>
-<% } else { %>
+<% } else if(dev == "dev" && title == "Lorenzo Aoulini | Portfolio") { %>
 <script>
-  var projects, contact;
+  var projects, timeline, contact;
   projects = document.createElement("p");
   projects.innerHTML = lang == "en" ? "Projects" : "Projets";
   projects.classList.add("navItem");
-  projects.style.cursor = "pointer";
-  projects.addEventListener("click", function () {
-    window.location.href = "/projects";
+  projects.addEventListener("mousedown", function (e) {
+    e.preventDefault();
+    console.log(e);
+    if (e.which == 1) window.location.href = "/projects";
+    else window.open("/projects", "_blank");
   });
+
+  timeline = document.createElement("p");
+  timeline.innerHTML = "Experience";
+  timeline.classList.add("navItem");
+  timeline.addEventListener("mousedown", function (e) {
+    e.preventDefault();
+    console.log(e);
+    if (e.which == 1) window.location.href = "/timeline";
+    else window.open("/timeline", "_blank");
+  });
+
   contact = document.createElement("p");
   contact.innerHTML = "Contact";
   contact.classList.add("navItem");
@@ -87,6 +112,7 @@
   var nav = document.createElement("div");
   nav.id = "nav-content";
   nav.appendChild(projects);
+  nav.appendChild(timeline);
   nav.appendChild(contact);
   document.querySelector(".navbar").appendChild(nav);
 </script>
