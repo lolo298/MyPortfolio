@@ -33,3 +33,4 @@ jobs:
           script: |
             cd /var/www/html/portfolio
             npm i
+            pm2 restart portfolio
