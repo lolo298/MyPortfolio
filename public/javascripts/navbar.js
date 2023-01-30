@@ -2,20 +2,18 @@ var projects, timeline, contact;
 projects = document.createElement("p");
 projects.innerHTML = lang == "en" ? "Projects" : "Projets";
 projects.classList.add("navItem");
-projects.addEventListener("mousedown", function (e) {
+projects.addEventListener("mouseup", function (e) {
   e.preventDefault();
-  console.log(e);
-  if (e.which == 1) window.location.href = "/projects";
+  if (e.button == 0) window.location.href = "/projects";
   else window.open("/projects", "_blank");
 });
 
 timeline = document.createElement("p");
 timeline.innerHTML = "Experience";
 timeline.classList.add("navItem");
-timeline.addEventListener("mousedown", function (e) {
+timeline.addEventListener("mouseup", function (e) {
   e.preventDefault();
-  console.log(e);
-  if (e.which == 1) window.location.href = "/timeline";
+  if (e.button == 0) window.location.href = "/timeline";
   else window.open("/timeline", "_blank");
 });
 
