@@ -151,7 +151,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "apidex apidexContent" "papContent pap" "portfolio portfolioContent" "jpo jpoContent";
+    grid-template-areas: "apidex apidexContent" "papContent pap" "portfolio portfolioContent" "jpoContent jpo";
 }
 
 .project {
@@ -165,8 +165,6 @@ body {
 
 .apidex {
     grid-area: apidex;
-    background-color: #3D3D3D;
-
 }
 
 .apidex img {
@@ -177,8 +175,7 @@ body {
 
 .pap {
     grid-area: pap;
-    background-color: #6390A0;
-
+    margin: 10px;
 }
 
 .pap img {
@@ -229,10 +226,10 @@ body {
 
 .jpo {
     grid-area: jpo;
-    background-color: white;
 }
 
 .jpo img {
+    margin: 10px;
     width: 30%;
     height: auto;
     border-radius: 20px;
