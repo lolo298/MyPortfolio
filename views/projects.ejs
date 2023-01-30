@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="og:title" property="og:title" content="Lorenzo Aoulini | Portfolio" />
+    <meta
+      property="og:image"
+      content="https://media.licdn.com/dms/image/C4D03AQFzP03IkmR7Og/profile-displayphoto-shrink_400_400/0/1647522478792?e=1677715200&v=beta&t=FOhQoiDCoZFPtpbJkOQWXgKPX3fCL852K8T3tqjVXGA"
+    />
+    <meta
+      name="description"
+      content="I am Lorenzo Aoulini, a junior web developper and this is my portfolio where i showcase my projects and skills"
+    />
+    <meta
+      property="og:description"
+      content="I am Lorenzo Aoulini, a junior web developper and this is my portfolio where i showcase my projects and skills"
+    />
+    <meta name="keywords" content="Lorenzo Aoulini Portfolio web developper " />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="author" content="Lorenzo Aoulini" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="/stylesheets/projects.css" />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <!-- prettier-ignore -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="/javascripts/jquery.visible.min.js"></script>
+  </head>
+  <body style="overflow-x: hidden">
+    <script>
+      var lang = "<%- lang %>";
+    </script>
+    <div class="navFix">
+      <!-- prettier-ignore -->
+      <svg id="logo" class="fixLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd"><path d="M231.839 109.96L124.324 377.677l19.362 11.15 65.766-110.567v-43.847l36.733-21.115 5.722-114.843-20.068 11.505zM143.686 388.829l22.063 12.716 52.33-59.677 70.903-.74 49.92 59.88 17.299-9.952-66.71-105.61-37.584 22.575-37.939-21.887-70.282 102.695z"/><path d="M251.907 98.455l18.936 10.92 104.833 270.337-19.475 11.344-61.841-112.748v-43.73l-36.718-21.265-5.735-114.858z"/></g></svg>
+      <h1>Lorenzo Aoulini</h1>
+    </div>
+    <div id="main">
+      <div class="projects">
+        <% if (lang == 'en') { %>
+        <h2>My projects</h2>
+        <% } else if(lang == 'fr') { %>
+        <h2>Mes projets</h2>
+        <% } %>
+        <div class="project-container">
+          <div class="apidexContent">
+            <h3>ApiDex</h3>
+            <% if(lang == 'en') { %>
+            <p style="text-align: center">
+              ApiDex is a website that i started to learn more about fetch and async functions. It
+              is still in development and i plan to add more features to it.
+            </p>
+            <a href="https://lorenzoa.dev/apidex/">Go to the website</a>
+            <% } else if(lang == 'fr') { %>
+            <p style="text-align: center">
+              ApiDex est un site web que j'ai commencé pour apprendre plus sur les fonctions fetch
+              et async. Il est toujours en développement et j'ai l'intention d'ajouter plus de
+              fonctionnalités.
+            </p>
+            <a href="https://lorenzoa.dev/apidex/">Aller sur le site</a>
+            <% } %>
+          </div>
+          <div class="papContent">
+            <h3>PAP</h3>
+            <% if(lang == 'en') { %>
+            <p style="text-align: center; margin: 10px">
+              PAP is a website that i made for a school project in group of 6. It is a website that
+              allows you to search for a shellfish and get information about it.
+            </p>
+            <a href="https://lorenzoa.dev/pap/">Go to the website</a>
+            <% } else if(lang == 'fr') { %>
+            <p style="text-align: center; margin: 10px">
+              PAP est un site web que j'ai fait pour un projet scolaire en groupe de 6. Il s'agit
+              d'un site web qui vous permet de rechercher un crustace et d'obtenir des informations
+              à son sujet.
+            </p>
+            <a href="https://lorenzoa.dev/pap/">Aller sur le site</a>
+            <% } %>
+          </div>
+          <div class="portfolioContent">
+            <h3>Portfolio</h3>
+            <% if(lang == 'en') { %>
+            <p style="text-align: center; margin: 10px">
+              This is my portfolio website. I made it to showcase my projects and skills.
+            </p>
+            <a href="https://lorenzoa.dev/">Go to the website</a>
+            <% } else if(lang == 'fr') { %>
+            <p style="text-align: center; margin: 10px">
+              C'est mon site web de portfolio. Je l'ai fait pour présenter mes projets et mes
+              compétences.
+            </p>
+            <a href="https://lorenzoa.dev/">Aller sur le site</a>
+            <% } %>
+          </div>
+          <div class="jpoContent">
+            <h3>JPO</h3>
+            <% if(lang == 'en') { %>
+            <p style="text-align: center; margin: 10px">
+              MMIQuest is a website I made for a school project in a group of 5. It is
+              a website on mobile allowing to play a game during the 2023 open house of
+              the MMI course at the IUT of Lannion.
+            </p>
+            <a href="https://tindrpg.lorenzoa.dev/">Go to the website</a>
+            <% } else if(lang == 'fr') { %>
+            <p style="text-align: center; margin: 10px">
+              MMIQuest est un site web que j'ai fait pour un projet scolaire en groupe de 5. Il s'agit
+              d'un site web sur mobile permettant de jouer à un jeu durant les portes ouvertes 2023 de
+               la formation MMI a l'IUT de lannion.
+            </p>
+            <a href="https://tindrpg.lorenzoa.dev/">Aller sur le site</a>
+            <% } %>
+          </div>
+          <div class="project apidex">
+            <img src="/images/Apidex.webp" alt="ApiDex" />
+          </div>
+          <div class="project pap">
+            <img src="/images/pap1.webp" alt="Projet PAP" />
+            <img src="/images/pap2.webp" alt="Projet PAP" />
+          </div>
+          <div class="project portfolio">
+            <img src="/images/portfolio.webp" alt="Portfolio" />
+          </div>
+          <div class="project jpo">
+            <img src="/images/jpo1.webp" alt="JPO" />
+            <img src="/images/jpo2.webp" alt="JPO" />
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <%- include('footer'); %>
+  </body>
+</html>

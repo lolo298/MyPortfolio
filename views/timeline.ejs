@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="og:title" property="og:title" content="Lorenzo Aoulini | Portfolio" />
+    <meta
+      property="og:image"
+      content="https://media.licdn.com/dms/image/C4D03AQFzP03IkmR7Og/profile-displayphoto-shrink_400_400/0/1647522478792?e=1677715200&v=beta&t=FOhQoiDCoZFPtpbJkOQWXgKPX3fCL852K8T3tqjVXGA"
+    />
+    <meta
+      name="description"
+      content="I am Lorenzo Aoulini, a junior web developper and this is my portfolio where i showcase my projects and skills"
+    />
+    <meta
+      property="og:description"
+      content="I am Lorenzo Aoulini, a junior web developper and this is my portfolio where i showcase my projects and skills"
+    />
+    <meta name="keywords" content="Lorenzo Aoulini Portfolio web developper " />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="author" content="Lorenzo Aoulini" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="/stylesheets/timeline.css" />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <!-- prettier-ignore -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="/javascripts/jquery.visible.min.js"></script>
+  </head>
+  <body style="overflow-x: hidden">
+    <script>
+      var lang = "<%- lang %>";
+    </script>
+    <div class="navFix">
+      <!-- prettier-ignore -->
+      <svg id="logo" class="fixLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g clip-rule="evenodd" fill="#3cde7c" fill-rule="evenodd"><path d="M231.839 109.96L124.324 377.677l19.362 11.15 65.766-110.567v-43.847l36.733-21.115 5.722-114.843-20.068 11.505zM143.686 388.829l22.063 12.716 52.33-59.677 70.903-.74 49.92 59.88 17.299-9.952-66.71-105.61-37.584 22.575-37.939-21.887-70.282 102.695z"/><path d="M251.907 98.455l18.936 10.92 104.833 270.337-19.475 11.344-61.841-112.748v-43.73l-36.718-21.265-5.735-114.858z"/></g></svg>
+      <h1>Lorenzo Aoulini</h1>
+    </div>
+    <div id="main">
+      <div class="experience flex">
+        <% if (lang == 'en') { %>
+        <h2>My experience</h2>
+        <% } else if(lang == 'fr') { %>
+        <h2>Mon experience</h2>
+        <% } %>
+        <div class="timeline-container">
+          <img class="icg image flex" src="/images/icg.webp" alt="ICG"/>
+          <div class="icgContent flex">
+            <h3>&mdash; 2022/2023</h3>
+            <% if (lang == "en"){ %>
+            <p>
+              I am currently working as a web developper at ICG, a company that
+              ask the french government to create registration documents for a car. 
+              I am principaly working on maintaining the company's website and
+              creating new features.
+            </p>
+            <% } else if (lang == "fr") { %>
+            <p>
+              Je travail actuellement en tant que developpeur web chez ICG, une
+              entreprise qui demande au gouvernement français de réaliser une carte grise
+              pour une voiture. Je travaille principalement sur la maintenance du site web
+              de l'entreprise et la création de nouvelles fonctionnalités.
+            </p>
+            <% } %>
+          </div>
+          <img class="iut image flex" src="/images/iut.webp" alt="IUT"/>
+          <div class="iutContent flex">
+            <h3>&mdash; 2022/2023</h3>
+            <% if (lang == "en"){ %>
+            <p>
+              I am currently studying at the IUT of Lannion, a french
+              university. I am studying web developpement and I am in my second
+              year.
+            </p>
+            <% } else if (lang == "fr") { %>
+            <p>
+              Je suis actuellement étudiant à l'IUT de Lannion, une université
+              française. Je suis en deuxième année d'étude en developpement web.
+            </p>
+            <% } %>
+          </div>
+          <img class="lcr image flex" src="/images/lcr.webp" alt="LCR"/>
+          <div class="lcrContent flex">
+            <h3>&mdash; 2020/2021</h3>
+            <% if (lang == "en"){ %>
+            <p>
+              I obtained an equivalent to BTEC National Diploma at the high school la croix rouge in Brest.
+              We studied the programming of IHM (Arduino)
+            </p>
+            <% } else if (lang == "fr") { %>
+            <p>
+              J'ai obtenu un BAC STI2D option SIN (Système d'Information et Numérique) au lycée la croix rouge a brest.
+              On a étudier la programmation d'IHM (Arduino) 
+            </p>
+            <% } %>
+          </div>
+          <div class="timeline flex"><img src="timeline.svg" alt="Timeline"></div>
+        </div>
+      </div>
+    </div>
+    <%- include('footer'); %>
+  </body>
+</html>

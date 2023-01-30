@@ -1,0 +1,101 @@
+body {
+    background-color: #141414;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0;
+    color: white;
+    font-family: "conthrax", sans-serif;
+}
+
+#main {
+    background-image: url("/PortfolioBackground.svg");
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+#logo {
+    width: 500px;
+    height: 500px;
+    display: none;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+}
+
+#logo.fixLogo {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    display: block;
+}
+
+.sep {
+    width: 80vw;
+    height: 1px;
+    background-color: rgb(198, 198, 198);
+    margin: 0 auto;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "icg timeline icgContent" "iutContent timeline iut" "lcr timeline lcrContent";
+    width: 80vw;
+    margin: 10px;
+    line-height: 2em;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icg {
+    grid-area: icg;
+}
+
+.icgContent {
+    grid-area: icgContent;
+    align-items: flex-start;
+}
+
+.iut {
+    grid-area: iut;
+}
+
+.iutContent {
+    grid-area: iutContent;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.lcr {
+    grid-area: lcr;
+}
+
+.lcrContent {
+    grid-area: lcrContent;
+    align-items: flex-start;
+}
+
+.timeline {
+    grid-area: timeline;
+}
+
+.timeline img {
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    border-radius: 20px;
+}
