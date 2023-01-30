@@ -19,7 +19,17 @@
     />
     <a href="https://linkedin.com/in/lorenzo-aoulini-a6772522a/">Linkedin</a>
   </div>
+  <select name="lang" id="lang">
+    <% if(lang == "en") { %>
+    <option value="en" selected>English</option>
+    <option value="fr">Français</option>
+    <% } else { %>
+    <option value="en">English</option>
+    <option value="fr" selected>Français</option>
+    <% } %>
+  </select>
 </footer>
+<script src="/javascripts/lang.js"></script>
 <script src="/javascripts/svg.js"></script>
 <% if(dev == "prod" && title == "Lorenzo Aoulini | Portfolio") { %>
 <script>
@@ -36,12 +46,11 @@
       }
       if (e.animationName == "reduceNav") {
         $("h1").css("visibility", "visible");
-
       }
       if (animState == 1) {
         var projects, contact;
         projects = document.createElement("p");
-        projects.innerHTML = "Projects";
+        projects.innerHTML = lang =="en" ? "Projects" : "Projets";
         projects.addEventListener("click", function () {
           document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
         });
@@ -63,10 +72,11 @@
 <script>
   var projects, contact;
   projects = document.createElement("p");
-  projects.innerHTML = "Projects";
+  projects.innerHTML = lang =="en" ? "Projects" : "Projets";
   projects.classList.add("navItem");
+  projects.style.cursor = "pointer";
   projects.addEventListener("click", function () {
-    document.querySelector(".projects").scrollIntoView({ behavior: "smooth" });
+    window.location.href = "/projects";
   });
   contact = document.createElement("p");
   contact.innerHTML = "Contact";
@@ -80,5 +90,8 @@
   nav.appendChild(contact);
   document.querySelector(".navbar").appendChild(nav);
 </script>
-<%} %>
+<%} %> <% if(title == "Lorenzo Aoulini | Portfolio") { %>
 <script src="/javascripts/index.js"></script>
+<% } %> <% if(title == "Lorenzo Aoulini | Projects") { %>
+<script src="/javascripts/projects.js"></script>
+<% } %>

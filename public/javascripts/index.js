@@ -28,12 +28,18 @@ async function deleteText(ref) {
   }
 }
 
-const learning = ["UX design", "web development", "graphic design", "Back-end development"];
+var learning = [];
+if (lang == "en") {
+  learning = ["UX design", "web development", "graphic design", "Back-end development"];
+} else if (lang == "fr") {
+  learning = ["UX design", "développement web", "design graphique", "développement Back-end"];
+}
 var textRunning = false;
 
 document.addEventListener("scroll", async () => {
   if (textRunning || !$("#learning").visible(true)) return;
   while ($("#learning").visible(true)) {
+    console.log(learning);
     textRunning = true;
     for (item of learning) {
       await type(item, "#learning");

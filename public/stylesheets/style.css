@@ -27,6 +27,15 @@ body {
   transform: translate(-50%, -50%);
   z-index: 500;
 }
+#logo.fixLogo {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  display: block;
+}
 
 #e02QbSUnrjA1 {
   width: 500px;

@@ -1,5 +1,6 @@
 const createError = require("http-errors");
 const express = require("express");
+var session = require("express-session");
 const path = require("path");
 const fs = require("fs");
 const cookieParser = require("cookie-parser");
@@ -14,12 +15,12 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.use('/robots.txt', function (req, res, next) {
-  res.type('text/plain')
+app.use("/robots.txt", function (req, res, next) {
+  res.type("text/plain");
   res.send("User-agent: *\nAllow: /\nSitemap: https://lorenzoa.dev/sitemap.xml");
 });
-app.get('/sitemap.xml', function (req, res, next) {
-  res.type('text/xml')
+app.get("/sitemap.xml", function (req, res, next) {
+  res.type("text/xml");
   fs.readFile("sitemap.xml", function (err, data) {
     res.send(data);
   });
@@ -29,6 +30,8 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ secret: process.env.SESSION, resave: true, saveUninitialized: true }));
+
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

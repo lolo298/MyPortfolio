@@ -22,6 +22,7 @@
     <script src="/javascripts/jquery.visible.min.js"></script>
   </head>
   <body style="overflow-x: hidden">
+    <script>var lang = '<%- lang %>';</script>
     <% if(dev == "prod") { %>
     <div class="anim">
       <!-- prettier-ignore -->
@@ -43,17 +44,29 @@
     <% } %>
     <div id="main">
       <div class="quote-container">
+        <% if(lang == "fr") { %>
+        <p id="quote">
+          “C'est là que j'ai réalisé qu'aussi terrifiante et douloureuse que soit la réalité, c'est aussi le seul
+          endroit où vous pouvez trouver le vrai bonheur. Parce que la réalité est réelle.”
+        </p>
+        <p>James Halliday dans player one de Ernest Cline</p>
+        <% } else if (lang == "en") { %>
         <p id="quote">
           “That was when I realized, as terrifying and painful as reality can be, it’s also the only
           place where you can find true happiness. Because reality is real.”
         </p>
-        <p>James Halliday dans player one de Ernest Cline</p>
+        <p>James Halliday in player one by Ernest Cline</p>
+        <% } %>
       </div>
       <div class="sep"></div>
       <div class="mockupContainer">
         <div id="mockupText">
           <h2>
+            <% if(lang == "en") {%> 
             I'm currently learning &nbsp;
+            <% } else if (lang == "fr") { %>
+            Je suis actuellement en train d'apprendre &nbsp;
+            <% } %>
             <div class="typingContainer">
               <span id="learning"></span>
               <span class="input-cursor"></span>
@@ -67,7 +80,11 @@
       </div>
       <div class="sep"></div>
       <div class="projects">
+        <% if(lang == "en") {%>
         <h2>What i do</h2>
+        <% } else if (lang == "fr") { %>
+        <h2>Qu'est ce que je fais</h2>
+        <% } %>
         <div class="project-container">
           <div class="project apidex">
             <img src="/images/Apidex.webp" alt="ApiDex" />
@@ -78,7 +95,13 @@
           </div>
         </div>
         <% if(dev == "dev") { %>
-        <a href="#"><h3>View my others projects -></h3></a>
+        <a href="projects">
+          <% if(lang == "en") {%> 
+          <h3>View my others projects -></h3>
+          <% } else if (lang == "fr") { %>
+          <h3>Voir mes autres projets -></h3>
+          <% } %>
+        </a>
         <% } %>
       </div>
     </div>
