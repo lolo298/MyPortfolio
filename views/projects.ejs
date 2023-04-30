@@ -48,7 +48,7 @@
         <h2>Mes projets</h2>
         <% } %>
         <div class="project-container">
-          <div class="apidexContent">
+          <div class="apidexContent content">
             <h3>ApiDex</h3>
             <% if(lang == 'en') { %>
             <p style="text-align: center">
@@ -65,7 +65,46 @@
             <a href="https://lorenzoa.dev/apidex/">Aller sur le site</a>
             <% } %>
           </div>
-          <div class="papContent">
+          <div class="underdiceContent content">
+            <h3>UnderDice</h3>
+            <% if(lang == 'en') { %>
+            <p style="text-align: center">
+              In this project I had to create a game using three.js, the game had to be a dice game
+              but we were free to choose the rules. I decided to remake a part of the game
+              "UnderTale" where you have to dodge attacks. For this project I had to learn how to
+              use three.js and I used it with typescript.
+            </p>
+            <a href="https://under-dice.vercel.app/">Go to the website</a>
+            <% } else if(lang == 'fr') { %>
+            <p style="text-align: center">
+              Dans ce projet j'ai du créer un jeu en utilisant three.js, le jeu devait être un jeu
+              de dés mais nous étions libre sur les règles. J'ai décidé de refaire une partie du jeu
+              "UnderTale" où il faut esquiver des attaques. Pour ce projet j'ai du apprendre à
+              utiliser three.js et je l'ai utilisé avec typescript.
+            </p>
+            <a href="https://under-dice.vercel.app/">Aller sur le site</a>
+            <% } %>
+          </div>
+          <div class="entContent content">
+            <h3>ent rework</h3>
+            <% if(lang == 'en') { %>
+            <p style="text-align: center">
+              I had to rework the intranet of my school and propose a new design. For this project
+              we were free on the tech stack and i decided to use React with typescript. this
+              project allowed me to learn more about new technologies and improve my skills.
+            </p>
+            <a href="https://ent.lorenzoa.dev/">Go to the website</a>
+            <% } else if(lang == 'fr') { %>
+            <p style="text-align: center">
+              J'ai du retravailler l'intranet de mon école et proposer un nouveau design. Pour ce
+              projet nous étions libre sur les technologies a utiliser, j'ai donc décidé d'utiliser
+              React avec typescript. Ce projet m'a permis d'en apprendre plus sur de nouvelles
+              technologies et d'améliorer mes compétences.
+            </p>
+            <a href="https://ent.lorenzoa.dev/">Aller sur le site</a>
+            <% } %>
+          </div>
+          <div class="papContent content">
             <h3>PAP</h3>
             <% if(lang == 'en') { %>
             <p style="text-align: center; margin: 10px">
@@ -82,7 +121,7 @@
             <a href="https://lorenzoa.dev/pap/">Aller sur le site</a>
             <% } %>
           </div>
-          <div class="portfolioContent">
+          <div class="portfolioContent content">
             <h3>Portfolio</h3>
             <% if(lang == 'en') { %>
             <p style="text-align: center; margin: 10px">
@@ -97,20 +136,20 @@
             <a href="https://lorenzoa.dev/">Aller sur le site</a>
             <% } %>
           </div>
-          <div class="jpoContent">
+          <div class="jpoContent content">
             <h3>JPO</h3>
             <% if(lang == 'en') { %>
             <p style="text-align: center; margin: 10px">
-              MMIQuest is a website I made for a school project in a group of 5. It is
-              a website on mobile allowing to play a game during the 2023 open house of
-              the MMI course at the IUT of Lannion.
+              MMIQuest is a website I made for a school project in a group of 5. It is a website on
+              mobile allowing to play a game during the 2023 open house of the MMI course at the IUT
+              of Lannion.
             </p>
             <a href="https://tindrpg.lorenzoa.dev/">Go to the website</a>
             <% } else if(lang == 'fr') { %>
             <p style="text-align: center; margin: 10px">
-              MMIQuest est un site web que j'ai fait pour un projet scolaire en groupe de 5. Il s'agit
-              d'un site web sur mobile permettant de jouer à un jeu durant les portes ouvertes 2023 de
-               la formation MMI a l'IUT de lannion.
+              MMIQuest est un site web que j'ai fait pour un projet scolaire en groupe de 5. Il
+              s'agit d'un site web sur mobile permettant de jouer à un jeu durant les portes
+              ouvertes 2023 de la formation MMI a l'IUT de lannion.
             </p>
             <a href="https://tindrpg.lorenzoa.dev/">Aller sur le site</a>
             <% } %>
@@ -125,11 +164,16 @@
           <div class="project portfolio">
             <img src="/images/portfolio.webp" alt="Portfolio" />
           </div>
+          <div class="project ent">
+            <img src="/images/entRemake.png" alt="ent" />
+          </div>
+          <div class="project underdice">
+            <img src="/images/underdice.png" alt="UnderDice" />
+          </div>
           <div class="project jpo">
             <img src="/images/jpo1.webp" alt="JPO" />
             <img src="/images/jpo2.webp" alt="JPO" />
           </div>
-          
         </div>
       </div>
     </div>

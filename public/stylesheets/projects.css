@@ -1,246 +1,267 @@
 body {
-    background-color: #141414;
-    position: relative;
-    left: 0;
-    top: 0;
-    margin: 0;
-    color: white;
-    font-family: "conthrax", sans-serif;
+  background-color: #141414;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0;
+  color: white;
+  font-family: "conthrax", sans-serif;
 }
 
 #main {
-    background-image: url("/PortfolioBackground.svg");
-    background-size: cover;
-    background-repeat: repeat-y;
-    overflow-x: hidden;
+  background-image: url("/PortfolioBackground.svg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  overflow-x: hidden;
 }
 
 #logo {
-    width: 500px;
-    height: 500px;
-    display: none;
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    z-index: 500;
+  width: 500px;
+  height: 500px;
+  display: none;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 500;
 }
 
 #logo.fixLogo {
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  display: block;
 }
 
 .quote-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
 
 }
 
 #quote {
-    font-family: 'Spring in May', cursive;
-    font-size: 38px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  font-family: 'Spring in May', cursive;
+  font-size: 38px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .sep {
-    width: 80vw;
-    height: 1px;
-    background-color: rgb(198, 198, 198);
-    margin: 0 auto;
+  width: 80vw;
+  height: 1px;
+  background-color: rgb(198, 198, 198);
+  margin: 0 auto;
 }
 
 .mockupContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .mockup {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #mockup-wrapper {
-    position: relative;
-    width: 50%;
-    height: 50%;
+  position: relative;
+  width: 50%;
+  height: 50%;
 }
 
 #phone {
-    position: absolute;
-    top: 0;
-    left: 30%;
+  position: absolute;
+  top: 0;
+  left: 30%;
 }
 
 #mockupText {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
 }
 
 #mockupText h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .typingContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3069ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3069ef;
 }
 
 .input-cursor {
-    display: inline-block;
-    width: 2px;
-    height: 42px;
-    background-color: white;
-    margin-left: 8px;
-    animation: blink .6s linear infinite alternate;
+  display: inline-block;
+  width: 2px;
+  height: 42px;
+  background-color: white;
+  margin-left: 8px;
+  animation: blink .6s linear infinite alternate;
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    40% {
-        opacity: 1;
-    }
+  40% {
+    opacity: 1;
+  }
 
-    60% {
-        opacity: 0;
-    }
+  60% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
 .projects a {
-    color: #5E73E0;
+  color: #5E73E0;
 }
 
 .project-container {
-    margin: 3%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "apidex apidexContent" "papContent pap" "portfolio portfolioContent" "jpoContent jpo";
+  margin: 3%;
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "apidex apidexContent"
+    "underdiceContent underdice"
+    "ent entContent"
+    "papContent pap"
+    "jpo jpoContent"
+    "portfolioContent portfolio";
 }
 
+
 .project {
-    width: 90%;
-    padding: 15px 10px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 90%;
+  padding: 15px 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .apidex {
-    grid-area: apidex;
+  grid-area: apidex;
 }
 
-.apidex img {
-    width: 100%;
-    border-radius: 20px;
-    height: auto;
+.underdice {
+  grid-area: underdice;
+}
+
+.ent {
+  grid-area: ent;
 }
 
 .pap {
-    grid-area: pap;
-    margin: 10px;
-}
-
-.pap img {
-    width: 30%;
-    height: auto;
-    border-radius: 20px;
-}
-
-.apidexContent {
-    grid-area: apidexContent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.papContent {
-    grid-area: papContent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.portfolio {
-    grid-area: portfolio;
-}
-
-.portfolio img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-.portfolioContent {
-    grid-area: portfolioContent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  grid-area: pap;
 }
 
 .jpo {
-    grid-area: jpo;
+  grid-area: jpo;
 }
 
+.apidex img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.underdice img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.ent img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+.pap img {
+  width: 30%;
+  border-radius: 20px;
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+
 .jpo img {
-    margin: 10px;
-    width: 30%;
-    height: auto;
-    border-radius: 20px;
+  width: 30%;
+  border-radius: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.apidexContent {
+  grid-area: apidexContent;
+}
+
+.underdiceContent {
+  grid-area: underdiceContent;
+
+}
+
+.entContent {
+  grid-area: entContent;
+
+}
+
+.papContent {
+  grid-area: papContent;
+
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+.portfolioContent {
+  grid-area: portfolioContent;
+
 }
 
 .jpoContent {
-    grid-area: jpoContent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  grid-area: jpoContent;
+
 }
